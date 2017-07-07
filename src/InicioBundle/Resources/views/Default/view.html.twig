@@ -1,0 +1,32 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+	<h1>Bienvenido</h1>
+
+	{% for flashMessage in app.session.flashbag.get('mensaje') %}
+	<span class="alert-success">{{ flashMessage }}</span>
+	{% endfor %}
+
+	<table class="table table-bordered">
+		<thead>
+			 <tr>
+				<th>Username</th>
+				<th>Password</th>
+				<th>Email</th>
+				<th>Status</th>
+			 </tr>
+		</thead>
+
+			<tbody>
+				{% for dato in datos %}
+			   <tr>
+			     <td>{{ dato.username }}</td>
+			     <td>{{ dato.password }}</td>
+			     <td>{{ dato.email }}</td>
+			     <td>{{ dato.status }}</td>
+			   </tr>
+				{% endfor %}
+			</tbody>
+	</table>
+
+{% endblock %}
