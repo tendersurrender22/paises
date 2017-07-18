@@ -26,10 +26,10 @@ class UserType extends AbstractType
                     'class' => 'InicioBundle:Country',
                     'choice_label' => 'name',
                     ))
-                /*->add('state', EntityType::class, array(
+                ->add('state', EntityType::class, array(
                     'class' => 'InicioBundle:State',
                     'choice_label' => 'name',
-                  ))*/
+                  ))
                 ->add('save', SubmitType::class, array('label' => 'Enviar'))
                 ;
 
